@@ -1,0 +1,6 @@
+framework module MetaBase {
+  umbrella header "MetaBase.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module MetaPlatform {
+  umbrella header "MetaPlatform.h"
+
+  export *
+  module * { export * }
+}

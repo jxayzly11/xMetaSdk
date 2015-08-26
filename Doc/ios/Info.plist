@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb499750536845653</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>499750536845653</string>
+	<key>MetaExtra</key>
+	<dict>
+		<key>PRODUCT_ADTIME_OVER</key>
+		<string>3</string>
+		<key>PRODUCT_ADTIME_PUASE</key>
+		<string>3</string>
+		<key>PRODUCT_ID</key>
+		<string>1022210934</string>
+		<key>PRODUCT_ID_U3</key>
+		<string>61092</string>
+		<key>PRODUCT_ID_UM</key>
+		<string>559cee6f67e58e55d5001e66</string>
+		<key>PRODUCT_ID_VG</key>
+		<string>55c85075d05df87b4000020a</string>
+		<key>PRODUCT_KEY_SCORE</key>
+		<string>TowerWithFriends</string>
+	</dict>
+</dict>
+</plist>

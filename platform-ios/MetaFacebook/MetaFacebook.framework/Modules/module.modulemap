@@ -1,0 +1,6 @@
+framework module MetaFacebook {
+  umbrella header "MetaFacebook.h"
+
+  export *
+  module * { export * }
+}
