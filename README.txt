@@ -99,7 +99,6 @@ android.library.reference.5=../../../xMetaSdk/platform-android/MetaVideo
 打开工程的Info.plist文件，根据提供的id.txt添加以下参数(部分参数没有就不添加，添加进 MetaExtra 中,可参考Doc/ios/info.plist)
 
 创建参数词典组：MetaExtra
-FacebookAppID          String
 PRODUCT_ID             String
 PRODUCT_ID_UM          String
 PRODUCT_ID_U3          String
@@ -107,6 +106,9 @@ PRODUCT_ID_VG          String
 PRODUCT_KEY_SCORE      String
 PRODUCT_ADTIME_PUASE   String      //暂停多少次出插屏
 PRODUCT_ADTIME_OVER    String      //失败多少次出插屏
+
+下面这个字段不需要放在 MetaExtra 里面，直接放在外面
+FacebookAppID          String
 
 
 —————————————Android———————————————
