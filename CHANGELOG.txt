@@ -1,0 +1,37 @@
+ChangeLog:
+
+v004 @ 20150911 
+————————————————————————————————————————————————————
+IOS:
+1.增加参数 PRODUCT_ID_AC
+2.xMetaSdk 内的部分 framework 修改，请删除后重新引用
+3.系统级 framework 删除以下 
+	CFNetwork  
+	libsqlite3.dylib
+4.系统级 framework 添加以下
+	CoreTelephony 
+	EventKit 
+	EventKitUI 
+	MessageUI 
+	Social 
+	WebKit 
+	libz.1.2.5.dylib
+
+Android:
+1.增加参数 PRODUCT_ID_AC
+2. AndroidManifest 删除 <activity android:name="com.vungle.publisher.FullScreenAdActivity”>
+3. AndroidManifest 增加 （参考示例 Manifest）
+	<activity android:name="com.jirbo.adcolony.AdColonyOverlay”>
+	<activity android:name="com.jirbo.adcolony.AdColonyFullscreen”>
+	<activity android:name="com.jirbo.adcolony.AdColonyBrowser”>
+
+Common: 
+1. MetaPlatform 增加 Event 统计功能
+2. 增加 MetaReplay 组件，目前在测试阶段，尚未开放
+—————————————————————————————————————————Allen@Metafun
+
+
+
+
+
+
