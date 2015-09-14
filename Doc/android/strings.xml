@@ -6,6 +6,7 @@
     <string name="PRODUCT_ID"></string>
     <string name="PRODUCT_ID_UM"></string>
     <string name="PRODUCT_ID_U3"></string>
+    <string name="PRODUCT_ID_AC"></string>
     <string name="PRODUCT_KEY_SCORE"></string>
 
     <string name="PRODUCT_ADTIME_PUASE">3</string>

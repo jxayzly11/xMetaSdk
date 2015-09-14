@@ -1,0 +1,6 @@
+framework module MetaReplay {
+  umbrella header "MetaReplay.h"
+
+  export *
+  module * { export * }
+}

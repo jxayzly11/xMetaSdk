@@ -58,6 +58,8 @@
 #define MP_REMOVEADS              0x110//写入去掉广告
 #define MP_ISREMOVEADS            0x111//获取是否去掉广告
 #define MP_VIBRATE                0x112//震动
+#define MP_CLIPBOARD              0x113//获取剪切板内容
+#define MP_EVENTCOUNT             0x114//事件统计
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频
@@ -74,6 +76,18 @@
 #define MFB_UPLOADARCHIVE         0x308//facebook上传成就
 #define MFB_ADDDOWNLOAD           0x309//增加一条头像下载
 #define MFB_GETHEADIMGPATH        0x30a//获取一个头像
+
+#define MR_AUTORECORD             0x400//自动记录
+#define MR_STARTRECORD            0x401//开始记录
+#define MR_PAUSERECORD            0x402//暂停记录
+#define MR_RESUMERECORD           0x403//恢复记录
+#define MR_STOPRECORD             0x404//停止记录
+#define MR_PLAYLASTRECORD         0x405//停止记录
+#define MR_CALL_SHOW              0x406//everyplay界面打开
+#define MR_CALL_HIDE              0x407//everyplay界面关闭
+#define MR_CALL_SCORE             0x408//提供计分类数据
+#define MR_CALL_LEVEL             0x409//提供关卡等级类数据
+#define MR_CALL_PLAYRECORD        0x40a//播放最后的录制视频
 
 class MetaCocos
 {

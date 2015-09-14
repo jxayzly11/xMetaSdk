@@ -23,6 +23,8 @@
 
 +(int) getVideoVG;
 
++(int) getVideoAC;
+
 +(NSString*) getVideoShow;
 
 /********************** getParamsFrom Game *********************/

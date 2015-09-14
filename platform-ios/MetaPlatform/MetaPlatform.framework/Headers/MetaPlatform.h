@@ -72,6 +72,10 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 +(NSString*)readPlatConfig:(NSString*)key defaultValue:(NSString*) value;
 
 +(void)Vibrate:(int)tim;
+
++(NSString*)getClipboard;
+
++(void)analysisEvent:(NSString*)event;
 #pragma mark - uiContorl -
 
 -(void)releaseIndicator;

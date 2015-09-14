@@ -17,6 +17,9 @@
 #if(SDK_METAFACEBOOK == SDK_OPEN)
     #import <MetaFacebook/MetaFacebook.h>
 #endif
+#if(SDK_METAREPLAY == SDK_OPEN)
+    #import <MetaReplay/MetaReplay.h>
+#endif
 
 void IOSPlat::initMeta(void* meta){
     overTimes=0;
@@ -43,6 +46,10 @@ void IOSPlat::initMeta(void* meta){
     
 #if(SDK_METAFACEBOOK == SDK_OPEN)
     [MetaFacebook initMeta:viewController];
+#endif
+    
+#if (SDK_METAREPLAY == SDK_OPEN)
+    [MetaReplay initMeta:viewController];
 #endif
 }
 
@@ -216,6 +223,11 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MP_VIBRATE:
             [MetaPlatform Vibrate:atoi(msg.c_str())];
             break;
+        case MP_CLIPBOARD:
+            return [[MetaPlatform getClipboard] UTF8String];
+        case MP_EVENTCOUNT:
+            [MetaPlatform analysisEvent:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            break;
     #endif
             
             
@@ -298,7 +310,38 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             return imgPath==nil? "":[imgPath UTF8String];
         }
     #endif
-            
+    #if (SDK_METAREPLAY == SDK_OPEN)
+        case MR_AUTORECORD:
+            [MetaReplay registerOnInvokeGame:^NSString*(NSNumber *retType, NSString* retMsg){
+                std::string ret  = getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
+                return [NSString stringWithCString:ret.c_str() encoding:[NSString defaultCStringEncoding]];
+            }];
+            [MetaReplay autoRecordForSeconds:atoi(msg.c_str())];
+            break;
+        case MR_STARTRECORD:
+            [MetaReplay startRecord];
+            break;
+        case MR_PAUSERECORD:
+            [MetaReplay pauseRecord];
+            break;
+        case MR_RESUMERECORD:
+            [MetaReplay resumeRecord];
+            break;
+        case MR_STOPRECORD:
+            [MetaReplay registerOnInvokeGame:^NSString*(NSNumber *retType, NSString* retMsg){
+                std::string ret  = getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
+                return [NSString stringWithCString:ret.c_str() encoding:[NSString defaultCStringEncoding]];
+            }];
+            [MetaReplay stopRecord];
+            break;
+        case MR_PLAYLASTRECORD:
+            [MetaReplay registerOnInvokeGame:^NSString*(NSNumber *retType, NSString* retMsg){
+                std::string ret  = getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
+                return [NSString stringWithCString:ret.c_str() encoding:[NSString defaultCStringEncoding]];
+            }];
+            [MetaReplay playLastRecord];
+            break;
+    #endif
             
     }
     return "IOS";
