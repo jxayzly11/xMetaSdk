@@ -31,6 +31,8 @@ void IOSPlat::initMeta(void* meta){
     
     BOOL isRemoveAds = NO;
     
+    [MetaBase initMeta:viewController];
+    
 #if(SDK_METAPLATFORM == SDK_OPEN)
     [MetaPlatform initMeta:viewController];
     isRemoveAds = ([[MetaPlatform readPlatConfig:@"mp_sob" defaultValue:@"false"] compare:@"true"] == NSOrderedSame);

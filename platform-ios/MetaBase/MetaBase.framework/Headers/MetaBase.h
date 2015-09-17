@@ -7,27 +7,37 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobClick.h"
-#import "Reachability.h"
-#import "InvokeParam.h"
+#import <MetaBase/MobClick.h>
+#import <MetaBase/Reachability.h>
+#import <MetaBase/InvokeParam.h>
+#import <MetaBase/UserAnalysis.h>
+
 
 @interface MetaBase : NSObject
 
+@property (nonatomic, strong) UIViewController *gameController;
+
++ (MetaBase*) getInstance;
+
++ (void)initMeta:(UIViewController*) controller;
+
++ (UIViewController*) getController;
+
 /********************** getParamsFrom Server *********************/
 
-+(NSString*) getShareLink;
++ (NSString*) getShareLink;
 
-+(NSString*) getSharePic;
++ (NSString*) getSharePic;
 
-+(int) getRateExe;
++ (int) getRateExe;
 
-+(int) getVideoVG;
++ (NSMutableDictionary*) getVideoParams;
 
-+(int) getVideoAC;
++ (NSMutableDictionary*) getRewardParams;
 
-+(NSString*) getVideoShow;
++ (NSMutableDictionary*) getParamsFromServer:(NSString*)name;
 
 /********************** getParamsFrom Game *********************/
-+(NSString*) getParamsFromGame:(NSString*)name;
++ (NSString*) getParamsFromGame:(NSString*)name;
 
 @end

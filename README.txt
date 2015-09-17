@@ -6,6 +6,7 @@ MetaSdk是Metafun旗下的SDK组合包，分为 Android 版和 Ios 版，主要�
 3.MetaVideo       视频广告SDK
 4.MetaFacebook    facebook功能SDK
 5.MetaCocos       cocos平台帮助SDK
+6.MetaReplay      游戏过程视频回放功能
  
 开发者可以根据自己的需求来自定义的选择集成SDK,使用cocos开发的游戏可以使用MetaCocos来提升自己的开发效率
 ———————————————————————————————————————MetaSdk—————————————————————end——
@@ -25,8 +26,9 @@ MetaSdk是Metafun旗下的SDK组合包，分为 Android 版和 Ios 版，主要�
 
 
 
-—————————————————————————MetaCocos————————————————————v001——
+—————————————————————————MetaCocos————————————————————v004——
 MetaCocos是针对使用cocos2d引擎的开发者提升集成SDK效率的组件
+更新前请先阅读 CHANGELOG.txt
 
 
 ————————————————————————环境配置————————————————————————
@@ -37,26 +39,54 @@ MetaCocos是针对使用cocos2d引擎的开发者提升集成SDK效率的组件
 3.以下为组件相应需要的添加的额外的 Frameworks 以及 设置：
 
 MetaVideo:
-	AdSupport
+	libz.1.2.5.dylib
+	libz.dylib
+	libsqlite3.dylib
+	AdSupport 
 	AudioToolbox
 	AVFoundation
-	CFNetwork
 	CoreGraphics
 	CoreMedia
 	CoreTelephony
+	CFNetwork
+	EventKit
+	EventKitUI
 	Foundation
-	libz.dylib
-	libsqlite3.dylib
 	MediaPlayer
+	MessageUI
 	QuartzCore
-	StoreKit
+	Social 
+	StoreKit 
 	SystemConfiguration
+	WebKit
 	UIKit
+	项目Target -> Build Settings -> Other Linker Flags 添加参数：-ObjC 
 
 MetaPlatform:
 	Social
 	GameKit
 	StoreKit
+
+MetaReplay:
+	AdSupport 
+	AssetsLibrary
+	AudioToolbox
+	AVFoundation
+	CoreGraphics
+	CoreImage
+	CoreMedia
+	CoreVideo
+	Foundation
+	MessageUI
+	MobileCoreServices
+	OpenGLES
+	QuartzCore
+	Security
+	Social 
+	StoreKit
+	SystemConfiguration
+	Twitter 
+	UIKit
 
 MetaAds:
 	libz.dylib
@@ -103,9 +133,11 @@ PRODUCT_ID             String
 PRODUCT_ID_UM          String
 PRODUCT_ID_U3          String
 PRODUCT_ID_VG          String
+PRODUCT_ID_AC          String
 PRODUCT_KEY_SCORE      String
 PRODUCT_ADTIME_PUASE   String      //暂停多少次出插屏
 PRODUCT_ADTIME_OVER    String      //失败多少次出插屏
+
 
 下面这个字段不需要放在 MetaExtra 里面，直接放在外面
 FacebookAppID          String
@@ -117,6 +149,7 @@ FacebookAppID
 PRODUCT_ID
 PRODUCT_ID_UM
 PRODUCT_ID_U3
+PRODUCT_ID_AC          
 PRODUCT_KEY_SCORE     
 PRODUCT_ADTIME_PUASE           //暂停多少次出插屏
 PRODUCT_ADTIME_OVER            //失败多少次出插屏
@@ -261,5 +294,5 @@ eg:
 
 ———————————————————————————————————————METACOCOS—————————————————————end——
                                                         ————Allen@Metafun
-                                                        ————20150825
+                                                        ————20150911
 
