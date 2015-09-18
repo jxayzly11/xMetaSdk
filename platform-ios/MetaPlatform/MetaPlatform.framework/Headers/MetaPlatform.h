@@ -43,6 +43,8 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 
 #pragma mark - baseSocial -
 
++(NSString*)getShareLink;
+
 +(NSString*)getItemByKey:(NSString*) key;
 
 +(void)uploadScore:(int64_t) score category:(NSString*)category;

@@ -81,7 +81,6 @@ std::string AndroidPlat::invokeMeta(int type, std::string msg) {
     if(strcmp(ret.c_str(), "") != 0){ \
         return ret;\
     }
-
 //优先判断是否Rate，然后判断是否显示Video，然后判断Ads计数
 #if(SDK_METAPLATFORM == SDK_OPEN)
     RETURN_INVOKEJFUNC("com/metafun/metaplatform/MetaPlatform", "invokePlat")

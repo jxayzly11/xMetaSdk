@@ -9,6 +9,10 @@ IOS:
 	libsqlite3.dylib
 	CFNetwork
         Foundation
+
+Android:
+1.AndroidManifest 增加 （参考示例 Manifest）
+	 <activity android:name="com.vungle.publisher.FullScreenAdActivity”>
 —————————————————————————————————————————Allen@Metafun
 
 

@@ -230,6 +230,8 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MP_EVENTCOUNT:
             [MetaPlatform analysisEvent:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
             break;
+        case MP_GETSHARELINK:
+            return [[MetaPlatform getShareLink] UTF8String];
     #endif
             
             
