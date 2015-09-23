@@ -101,6 +101,10 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:hardwareAccelerated="true" />
         <activity
+            android:name="com.vungle.publisher.FullScreenAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
             android:name="com.jirbo.adcolony.AdColonyOverlay"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
