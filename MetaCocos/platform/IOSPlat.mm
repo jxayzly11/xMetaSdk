@@ -232,6 +232,8 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             break;
         case MP_GETSHARELINK:
             return [[MetaPlatform getShareLink] UTF8String];
+        case MP_GETISCHINESEUSER:
+            return [MetaPlatform getIsChineseUser]? "true":"false";
     #endif
             
             

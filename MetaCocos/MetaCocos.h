@@ -61,6 +61,7 @@
 #define MP_CLIPBOARD              0x113//获取剪切板内容
 #define MP_EVENTCOUNT             0x114//事件统计
 #define MP_GETSHARELINK           0x115//获取分享link
+#define MP_GETISCHINESEUSER       0x116//获取是否是大陆佬
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频

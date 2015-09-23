@@ -26,7 +26,7 @@ MetaSdk是Metafun旗下的SDK组合包，分为 Android 版和 Ios 版，主要�
 
 
 
-—————————————————————————MetaCocos————————————————————v004——
+—————————————————————————MetaCocos————————————————————v006——
 MetaCocos是针对使用cocos2d引擎的开发者提升集成SDK效率的组件
 更新前请先阅读 CHANGELOG.txt
 
@@ -36,31 +36,89 @@ MetaCocos是针对使用cocos2d引擎的开发者提升集成SDK效率的组件
 —————————————IOS———————————————
 1.打开工程将xMetaSdk以Group的方式添加进游戏
 2.删除 platform-android,Doc,README.txt 等不需要的组件的引用
-3.以下为组件相应需要的添加的额外的 Frameworks 以及 设置：
+3.在info.plist中增加字段来适应 IOS9 的 ATS：
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+
+4.假如用到以下组件，则在info.plist中增加对应字段
 
 MetaVideo:
-	libz.1.2.5.dylib
-	libz.dylib
-	libsqlite3.dylib
-	AdSupport 
+<key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fb</string>
+        <string>instagram</string>
+        <string>tumblr</string>
+        <string>twitter</string>
+    </array>
+</key>
+
+MetaFacebook:
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>fbapi</string>
+    <string>fbapi20130214</string>
+    <string>fbapi20130410</string>
+    <string>fbapi20130702</string>
+    <string>fbapi20131010</string>
+    <string>fbapi20131219</string>    
+    <string>fbapi20140410</string>
+    <string>fbapi20140116</string>
+    <string>fbapi20150313</string>
+    <string>fbapi20150629</string>
+    <string>fbauth</string>
+    <string>fbauth2</string>
+    <string>fb-messenger-api20140430</string>
+</array>
+
+5.以下为组件相应需要的添加的额外的 Frameworks 以及 设置：
+
+MetaAds:
+	libz.tbd
+	AdSupport
 	AudioToolbox
 	AVFoundation
 	CoreGraphics
+	CoreMotion
+	CoreTelephony
+	CoreLocation
+	EventKit
+	EventKitUI
+	Foundation
+	MessageUI
+	Security
+	StoreKit
+	SystemConfiguration
+	QuarzCore
+	UIKit
+	MediaPlayer        （非必需，若cocos游戏报错添加）
+	GameController     （非必需，若cocos游戏报错添加）	
+	项目Target -> Build Settings -> Other Linker Flags 分别添加两个参数：-ObjC, -lstdc++
+
+MetaVideo:
+	libz.tbd
+	libz.1.2.5.tbd
+	libsqlite3.tbd
+	AdSupport
+	AudioToolbox
+	AVFoundation
+	CFNetwork
+	CoreGraphics
 	CoreMedia
 	CoreTelephony
-	CFNetwork
 	EventKit
 	EventKitUI
 	Foundation
 	MediaPlayer
 	MessageUI
 	QuartzCore
-	Social 
-	StoreKit 
+	Social (Set to Optional)
+	StoreKit
 	SystemConfiguration
-	WebKit
 	UIKit
-	项目Target -> Build Settings -> Other Linker Flags 添加参数：-ObjC 
+	WebKit                 (Set to Optional)
 
 MetaPlatform:
 	Social
@@ -73,7 +131,7 @@ MetaReplay:
 	AudioToolbox
 	AVFoundation
 	CoreGraphics
-	CoreImage
+	CoreImage(iOS 5+, set to Optional link for pre-iOS 5 compatibility)
 	CoreMedia
 	CoreVideo
 	Foundation
@@ -85,31 +143,8 @@ MetaReplay:
 	Social 
 	StoreKit
 	SystemConfiguration
-	Twitter 
+	Twitter (iOS 5+, set to Optional link for pre-iOS 5 compatibility)
 	UIKit
-
-MetaAds:
-	libz.dylib
-	AdSupport
-	AudioToolbox
-	AVFoundation
-	CoreMedia
-	CoreMotion
-	CoreGraphics
-	CoreTelephony
-	CoreLocation
-	EventKit
-	EventKitUI
-	Foundation
-	MessageUI
-	Security
-	StoreKit
-	SystemConfiguration
-	QuartzCore
-	UIKit
-	MediaPlayer        （非必需，若cocos游戏报错添加）
-	GameController     （非必需，若cocos游戏报错添加）
-	项目Target -> Build Settings -> Other Linker Flags 分别添加两个参数：-ObjC, -lstdc++
 
 MetaFacebook:
        项目Target -> Info -> URL Type 添加参数 URL Schemes:fbxxxxxxxxxxx(“xx..”为facebook id) ，其他为默认参数
@@ -294,5 +329,5 @@ eg:
 
 ———————————————————————————————————————METACOCOS—————————————————————end——
                                                         ————Allen@Metafun
-                                                        ————20150911
+                                                        ————20150923
 

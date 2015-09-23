@@ -78,6 +78,9 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 +(NSString*)getClipboard;
 
 +(void)analysisEvent:(NSString*)event;
+
++(BOOL)getIsChineseUser;
+
 #pragma mark - uiContorl -
 
 -(void)releaseIndicator;
