@@ -239,8 +239,8 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
                 NSDictionary *msgDic = parseJson(msg);
                 NSString *key = [msgDic objectForKey:@"key"];
                 NSString *content = [msgDic objectForKey:@"content"];
-                NSInteger delayTim = [[msgDic objectForKey:[@"delayTim" ] intValue];
-                NSInteger badgeNum = [[msgDic objectForKey:[@"badgeNum" ] intValue];
+                NSInteger delayTim = [[msgDic objectForKey:@"delayTim"] intValue];
+                NSInteger badgeNum = [[msgDic objectForKey:@"badgeNum"] intValue];
                 [MetaPlatform scheduleLocalNotification:key
                                                 content:content
                                                delayTim:delayTim
