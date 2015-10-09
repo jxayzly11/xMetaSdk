@@ -57,7 +57,7 @@ void IOSPlat::initMeta(void* meta){
 
 std::string IOSPlat::invokeMeta(int type, std::string msg){
     id(^parseJson)(std::string)  = ^id(std::string srcJson){
-        NSString* msgStr= [NSString stringWithCString:srcJson.c_str() encoding:[NSString defaultCStringEncoding]];
+        NSString* msgStr= [NSString stringWithCString:srcJson.c_str() encoding:NSUTF8StringEncoding];
         NSData* msgData = [msgStr dataUsingEncoding:NSUTF8StringEncoding];
         return [NSJSONSerialization JSONObjectWithData:msgData options:NSJSONReadingAllowFragments error:nil];
     };
@@ -145,7 +145,7 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             
     #if(SDK_METAPLATFORM == SDK_OPEN)
         case MP_GETITEMKEY:
-            return [[MetaPlatform getItemByKey:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]] UTF8String];
+            return [[MetaPlatform getItemByKey:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]] UTF8String];
         case MP_UPLOADSCORE:
         {
             NSDictionary *msgDic = parseJson(msg);
@@ -166,7 +166,7 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             [MetaPlatform moreGame];
             break;
         case MP_SHOWRANK:
-            [MetaPlatform showRank:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            [MetaPlatform showRank:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             break;
         case MP_SHOWRATE:
             [MetaPlatform writePlatConfig:@"mb_rate" value:@"100"];
@@ -198,7 +198,7 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
                 getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
                 return nil;
             }];
-            [MetaPlatform buy:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            [MetaPlatform buy:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             break;
         }
         case MP_RESTORE:
@@ -228,12 +228,29 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MP_CLIPBOARD:
             return [[MetaPlatform getClipboard] UTF8String];
         case MP_EVENTCOUNT:
-            [MetaPlatform analysisEvent:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            [MetaPlatform analysisEvent:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             break;
         case MP_GETSHARELINK:
             return [[MetaPlatform getShareLink] UTF8String];
         case MP_GETISCHINESEUSER:
             return [MetaPlatform getIsChineseUser]? "true":"false";
+        case MP_ADD_LOCALNOTICE:
+            {
+                NSDictionary *msgDic = parseJson(msg);
+                NSString *key = [msgDic objectForKey:@"key"];
+                NSString *content = [msgDic objectForKey:@"content"];
+                NSInteger delayTim = [[msgDic objectForKey:[@"delayTim" ] intValue];
+                NSInteger badgeNum = [[msgDic objectForKey:[@"badgeNum" ] intValue];
+                [MetaPlatform scheduleLocalNotification:key
+                                                content:content
+                                               delayTim:delayTim
+                                              repeatTim:NSCalendarUnitEra
+                                               badgeNum:badgeNum];
+            }
+            break;
+        case MP_REMOVE_LOCALNOTICE:
+            [MetaPlatform unscheduleLocalNotification:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
+            break;
     #endif
             
             
@@ -305,14 +322,14 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             [MetaFacebook SendScore:std::atoi(msg.c_str())];
             break;
         case MFB_UPLOADARCHIVE:
-            [MetaFacebook SendAchievement:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            [MetaFacebook SendAchievement:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             break;
         case MFB_ADDDOWNLOAD:
-            [MetaFacebook addImageDownloadEvent:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            [MetaFacebook addImageDownloadEvent:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             break;
         case MFB_GETHEADIMGPATH:
         {
-            NSString *imgPath = [MetaFacebook getImagePath:[NSString stringWithCString:msg.c_str() encoding:[NSString defaultCStringEncoding]]];
+            NSString *imgPath = [MetaFacebook getImagePath:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             return imgPath==nil? "":[imgPath UTF8String];
         }
     #endif
@@ -320,7 +337,7 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MR_AUTORECORD:
             [MetaReplay registerOnInvokeGame:^NSString*(NSNumber *retType, NSString* retMsg){
                 std::string ret  = getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
-                return [NSString stringWithCString:ret.c_str() encoding:[NSString defaultCStringEncoding]];
+                return [NSString stringWithCString:ret.c_str() encoding:NSUTF8StringEncoding];
             }];
             [MetaReplay autoRecordForSeconds:atoi(msg.c_str())];
             break;
@@ -336,14 +353,14 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MR_STOPRECORD:
             [MetaReplay registerOnInvokeGame:^NSString*(NSNumber *retType, NSString* retMsg){
                 std::string ret  = getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
-                return [NSString stringWithCString:ret.c_str() encoding:[NSString defaultCStringEncoding]];
+                return [NSString stringWithCString:ret.c_str() encoding:NSUTF8StringEncoding];
             }];
             [MetaReplay stopRecord];
             break;
         case MR_PLAYLASTRECORD:
             [MetaReplay registerOnInvokeGame:^NSString*(NSNumber *retType, NSString* retMsg){
                 std::string ret  = getOnInvokeGame()([retType intValue], [retMsg UTF8String]);
-                return [NSString stringWithCString:ret.c_str() encoding:[NSString defaultCStringEncoding]];
+                return [NSString stringWithCString:ret.c_str() encoding:NSUTF8StringEncoding];
             }];
             [MetaReplay playLastRecord];
             break;

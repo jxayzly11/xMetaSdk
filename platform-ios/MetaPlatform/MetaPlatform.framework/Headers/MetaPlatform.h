@@ -81,6 +81,14 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 
 +(BOOL)getIsChineseUser;
 
++(void)unscheduleLocalNotification:(NSString*)key;
+
++(void)scheduleLocalNotification:(NSString*)key
+                         content:(NSString*)content
+                        delayTim:(NSInteger)delayTim
+                       repeatTim:(NSCalendarUnit)repeatTim
+                       badgeNum:(NSInteger)badgeNum;
+
 #pragma mark - uiContorl -
 
 -(void)releaseIndicator;
