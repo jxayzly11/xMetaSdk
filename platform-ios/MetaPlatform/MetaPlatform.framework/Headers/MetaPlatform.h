@@ -81,6 +81,8 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 
 +(BOOL)getIsChineseUser;
 
++(BOOL)getIsOpenMenuRate;
+
 +(void)unscheduleLocalNotification:(NSString*)key;
 
 +(void)scheduleLocalNotification:(NSString*)key

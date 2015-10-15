@@ -31,6 +31,8 @@
 
 + (int) getRateExe;
 
++ (BOOL) getMenuRateExe;
+
 + (NSMutableDictionary*) getVideoParams;
 
 + (NSMutableDictionary*) getRewardParams;

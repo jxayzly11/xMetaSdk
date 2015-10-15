@@ -251,6 +251,8 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MP_REMOVE_LOCALNOTICE:
             [MetaPlatform unscheduleLocalNotification:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
             break;
+        case MP_ISOPENMENURATE:
+            return [MetaPlatform getIsOpenMenuRate]? "true":"false";
     #endif
             
             

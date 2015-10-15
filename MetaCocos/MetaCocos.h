@@ -64,6 +64,7 @@
 #define MP_GETISCHINESEUSER       0x116//获取是否是大陆佬
 #define MP_ADD_LOCALNOTICE        0x117//增加一条本地通知
 #define MP_REMOVE_LOCALNOTICE     0x118//删除一条本地通知
+#define MP_ISOPENMENURATE         0x119//获取是否打开菜单的Rate
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频
