@@ -7,6 +7,7 @@ MetaSdk是Metafun旗下的SDK组合包，分为 Android 版和 Ios 版，主要�
 4.MetaFacebook    facebook功能SDK
 5.MetaCocos       cocos平台帮助SDK
 6.MetaReplay      游戏过程视频回放功能
+7.MetaAdjust      adjust集成功能
  
 开发者可以根据自己的需求来自定义的选择集成SDK,使用cocos开发的游戏可以使用MetaCocos来提升自己的开发效率
 ———————————————————————————————————————MetaSdk—————————————————————end——
@@ -26,7 +27,7 @@ MetaSdk是Metafun旗下的SDK组合包，分为 Android 版和 Ios 版，主要�
 
 
 
-—————————————————————————MetaCocos————————————————————v006——
+—————————————————————————MetaCocos————————————————————v009——
 MetaCocos是针对使用cocos2d引擎的开发者提升集成SDK效率的组件
 更新前请先阅读 CHANGELOG.txt
 
@@ -169,6 +170,7 @@ PRODUCT_ID_UM          String
 PRODUCT_ID_U3          String
 PRODUCT_ID_VG          String
 PRODUCT_ID_AC          String
+PRODUCT_ID_ADJUST      String
 PRODUCT_KEY_SCORE      String
 PRODUCT_ADTIME_PUASE   String      //暂停多少次出插屏
 PRODUCT_ADTIME_OVER    String      //失败多少次出插屏
@@ -184,7 +186,8 @@ FacebookAppID
 PRODUCT_ID
 PRODUCT_ID_UM
 PRODUCT_ID_U3
-PRODUCT_ID_AC          
+PRODUCT_ID_AC  
+PRODUCT_ID_ADJUST        
 PRODUCT_KEY_SCORE     
 PRODUCT_ADTIME_PUASE           //暂停多少次出插屏
 PRODUCT_ADTIME_OVER            //失败多少次出插屏
