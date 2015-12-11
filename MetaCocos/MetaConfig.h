@@ -15,7 +15,8 @@
 #define SDK_METAPLATFORM   SDK_OPEN        //是否使用平台组件
 #define SDK_METAVIDEO      SDK_OPEN        //是否使用视频组件
 #define SDK_METAFACEBOOK   SDK_OPEN        //是否使用facebook组件
-#define SDK_METAREPLAY     SDK_OFF         //是否使用游戏视频记录组件
+#define SDK_METAREPLAY     SDK_OFF        //是否使用游戏视频记录组件
+#define SDK_ADJUST         SDK_OPEN       //分析和广告推送挂载组建
 
 #include "cocos2d.h"
 

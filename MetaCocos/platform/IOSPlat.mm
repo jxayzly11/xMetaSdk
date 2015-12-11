@@ -20,6 +20,10 @@
 #if(SDK_METAREPLAY == SDK_OPEN)
     #import <MetaReplay/MetaReplay.h>
 #endif
+#if(SDK_ADJUST == SDK_OPEN)
+    #import <MetaAdjust/MetaAdjust.h>
+#endif
+
 
 void IOSPlat::initMeta(void* meta){
     overTimes=0;
@@ -53,6 +57,11 @@ void IOSPlat::initMeta(void* meta){
 #if (SDK_METAREPLAY == SDK_OPEN)
     [MetaReplay initMeta:viewController];
 #endif
+    
+#if (SDK_ADJUST == SDK_OPEN)
+    [MetaAdjust initMeta:viewController];
+#endif
+
 }
 
 std::string IOSPlat::invokeMeta(int type, std::string msg){

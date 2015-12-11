@@ -40,7 +40,7 @@ extern "C" {
 #if (SDK_METAFACEBOOK == SDK_OPEN)
     RegistInvokeGame(Java_com_metafun_metafacebook_MetaFacebook_invokeGame)
 #endif
-
+    
 std::string invokeJFunc(std::string funcPath, std::string funcName, int type, std::string msg)
 {
     std::string ret = "";
@@ -94,8 +94,7 @@ std::string AndroidPlat::invokeMeta(int type, std::string msg) {
 #if(SDK_METAFACEBOOK == SDK_OPEN)
     RETURN_INVOKEJFUNC("com/metafun/metafacebook/MetaFacebook", "invokePlat")
 #endif
-    
-	return "";
+    return "";
 }
 
 #endif

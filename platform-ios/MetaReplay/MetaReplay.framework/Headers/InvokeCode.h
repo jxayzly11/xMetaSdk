@@ -14,6 +14,5 @@
 #define MEV_CALL_SCORE            0x408//提供计分类数据
 #define MEV_CALL_LEVEL            0x409//提供关卡等级类数据
 #define MEV_CALL_PLAYRECORD       0x40a//播放最后的录制视频
-#define PRODUCT_EV                @"PRODUCT_EV"
 
 #endif
