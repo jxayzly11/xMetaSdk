@@ -268,6 +268,10 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             [MetaPlatform getScore:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding] callBack:^(NSString* str){
                 getOnInvokeGame()(MP_GETLEADERSCORE, [str UTF8String]);
             }];
+            break;
+        case MP_SHOWACHIEVEMENT:
+            [MetaPlatform showAchievement];
+            break;
     #endif
             
             

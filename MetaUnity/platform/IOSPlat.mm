@@ -263,11 +263,15 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MP_ISOPENMENURATE:
             return [MetaPlatform getIsOpenMenuRate]? "true":"false";
         case MP_GETUSERNAME:
-            return [MetaPlatform getUserName];
+            return [[MetaPlatform getUserName] UTF8String];
         case MP_GETLEADERSCORE:
-            [MetaPlatform getScore:msg callBack:^(NSString* str){
-                getOnInvokeGame()(MP_GETLEADERSCORE, str);
+            [MetaPlatform getScore:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding] callBack:^(NSString* str){
+                getOnInvokeGame()(MP_GETLEADERSCORE, [str UTF8String]);
             }];
+            break;
+        case MP_SHOWACHIEVEMENT:
+            [MetaPlatform showAchievement];
+            break;
     #endif
             
             
