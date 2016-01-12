@@ -25,6 +25,10 @@ SKStoreProductViewControllerDelegate>{
 
 - (void) initHelper: (UIViewController*) control productID: (NSString*) productID;
 
+-(NSString*) getUserName;
+
+- (void) getScore: (NSString*) leaderboardID callBack:(void(^)(NSString*)) block;
+
 - (void) reportScore: (int64_t) score forCategory: (NSString*) category;
 
 - (void) reportArchivement: (int64_t) point forIndentifier: (NSString*) indentifier;
@@ -32,6 +36,8 @@ SKStoreProductViewControllerDelegate>{
 - (void) moreGame: (NSString*) link;
 
 - (void) showRank: (NSString*) categroy;
+
+- (void) showAchievement;
 
 - (void) showShare: (NSString*) text img: (NSString*) img;
 

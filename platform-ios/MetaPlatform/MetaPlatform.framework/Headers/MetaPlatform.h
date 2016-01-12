@@ -47,6 +47,10 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 
 +(NSString*)getItemByKey:(NSString*) key;
 
++(NSString*) getUserName;
+
++(void) getScore: (NSString*) leaderboardID callBack:(void(^)(NSString*)) block;
+
 +(void)uploadScore:(int64_t) score category:(NSString*)category;
 
 +(void)uploadArchivement: (int64_t) point indentifier: (NSString*) indentifier;
@@ -54,6 +58,8 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 +(void)moreGame;
 
 +(void)showRank:(NSString*) categroy;
+
++(void)showAchievement;
 
 +(void)showRate;
 

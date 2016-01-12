@@ -16,10 +16,15 @@
 #define MA_BANNER_CENNER_BOTTOM   "1"//banner位置为底部中央值
 
 //General-Location
-#define MSLocationPauseBefore     "MSLocationPauseBefore"//暂停动画之前调用
-#define MSLocationPauseAfter      "MSLocationPauseAfter" //暂停动画之后调用
-#define MSLocationOverBefore      "MSLocationOverBefore" //结束动画之前调用
-#define MSLocationOverAfter       "MSLocationOverAfter"  //结束动画之后调用
+#define MSLocationPauseBefore     "MSLocationPauseBefore"  //暂停动画之前调用
+#define MSLocationPauseAfter      "MSLocationPauseAfter"   //暂停动画之后调用
+#define MSLocationPauseOver       "MSLocationPauseOver"    //暂停界面结束调用
+#define MSLocationOverBefore      "MSLocationOverBefore"   //结束动画之前调用
+#define MSLocationOverAfter       "MSLocationOverAfter"    //结束动画之后调用
+#define MSLocationOverOver        "MSLocationOverOver"     //结束界面结束调用
+#define MSLocationNativeBefore    "MSLocationNativeBefore" //原生界面之前调用
+#define MSLocationNativeAfter     "MSLocationNativeAfter"  //原生界面之后调用
+#define MSLocationNativeOver      "MSLocationNativeOver"   //原生界面结束调用
 
 //General-AdType
 #define MSTypeNull                "MSTypeNull"         //啥也没有
@@ -27,17 +32,19 @@
 #define MSTypeVideo               "MSTypeVideo"        //视频广告界面
 #define MSTypeVideoReward         "MSTypeVideoReward"  //奖励的视频广告
 #define MSTypeInterstitial        "MSTypeInterstitial" //插屏广告界面
+#define MSTypeNative              "MSTypeNative"       //原生广告
 
 //General-Invoke Code
 #define MA_SETADLOAD              0x01//启动广告加载
-#define MA_HIDEBANNER             0x02//隐藏banner
-#define MA_SHOWBANNER             0x03//显示banner
-#define MA_BANNERPOSITION         0x04//设置banner位置
-#define MA_SHOWGAMEAD             0x05//显示插屏广告,增加位置参数后会返回开发者这次播放的是什么类型的广告
-#define MA_SHOWMOREGAMES          0x06//显示更多游戏
-#define MA_NATIVEICONCACHE        0x07//请求原生广告
-#define MA_NATIVEICONCLICKED      0x08//原生广告被点击
-#define MA_EXIT                   0x09//显示退出广告
+#define MA_SETNATIVE_CONFIG       0x02//设置原生参数
+#define MA_HIDEBANNER             0x03//隐藏banner
+#define MA_SHOWBANNER             0x04//显示banner
+#define MA_BANNERPOSITION         0x05//设置banner位置
+#define MA_SHOWGAMEAD             0x06//显示插屏广告,增加位置参数后会返回开发者这次播放的是什么类型的广告
+#define MA_SHOWMOREGAMES          0x07//显示更多游戏
+#define MA_NATIVEICONCACHE        0x08//请求原生广告
+#define MA_NATIVEICONCLICKED      0x09//原生广告被点击
+#define MA_EXIT                   0x0a//显示退出广告
 
 #define MP_GETITEMKEY             0x100//根据名字获取Key值
 #define MP_UPLOADSCORE            0x101//上传榜单分数
@@ -65,6 +72,8 @@
 #define MP_ADD_LOCALNOTICE        0x117//增加一条本地通知
 #define MP_REMOVE_LOCALNOTICE     0x118//删除一条本地通知
 #define MP_ISOPENMENURATE         0x119//获取是否打开菜单的Rate
+#define MP_GETUSERNAME            0x120//获取GooglePlay/GameCenter的用户名
+#define MP_GETLEADERSCORE         0x121//获取当前Google/apple帐号的排行榜分数
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频

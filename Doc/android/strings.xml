@@ -8,6 +8,7 @@
     <string name="PRODUCT_ID_U3"></string>
     <string name="PRODUCT_ID_AC"></string>
     <string name="PRODUCT_KEY_SCORE"></string>
+    <string name="PRODUCT_EV"></string>
 
     <string name="PRODUCT_ADTIME_PUASE">3</string>
     <string name="PRODUCT_ADTIME_OVER">3</string>
