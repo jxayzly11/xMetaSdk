@@ -103,6 +103,7 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
                     [MetaAds showGameAd];
                     return MSTypeInterstitial;
                 }
+            }else if(msg==MSLocationPauseOver){
             }else if(msg==MSLocationOverBefore){
             #if(SDK_METAPLATFORM == SDK_OPEN)
                 int rateExe = [MetaBase getRateExe];
@@ -128,6 +129,10 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
                     return MSTypeInterstitial;
                 }
             }else if(msg==MSLocationOverAfter){
+            }else if(msg==MSLocationOverOver){
+            }else if(msg==MSLocationNativeBefore){
+            }else if(msg==MSLocationNativeAfter){
+            }else if(msg==MSLocationNativeOver){
             }else{
                 [MetaAds showGameAd];
                 return MSTypeInterstitial;
