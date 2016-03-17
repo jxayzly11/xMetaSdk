@@ -1,5 +1,15 @@
 ChangeLog:
 
+v012 @ 20160317
+————————————————————————————————————————————————————
+1.AndroidManifest.xml 请覆盖 About MetaAds 部分
+2.在 MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationPauseBefore);
+或 MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationOverBefore); 之前必须调用 MetaCocos::getInstance()->invokeMeta(MA_SETNATIVE_CONFIG,"{\"showBanner\":true,\"overShowBanner\":true}"); 来设置banner参数。
+
+v011 @ 20160307
+————————————————————————————————————————————————————
+1.修复IOS7.0的Crush问题
+
 v010 @ 20160111
 ————————————————————————————————————————————————————
 1.增加广告平台的 NativeAd，若要集成平台 NativeAd，请参照集成说明

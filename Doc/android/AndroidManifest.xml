@@ -56,6 +56,14 @@
             </intent-filter>
         </receiver>
         
+        <receiver
+            android:name="com.adjust.sdk.AdjustReferrerReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
@@ -79,6 +87,12 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Google"/>
+        <meta-data
+            android:name="Adjust_Token"
+            android:value="@string/PRODUCT_ID_ADJUST_TOKEN" />
+        <meta-data
+            android:name="Adjust_Evn"
+            android:value="@string/PRODUCT_ID_ADJUST_EVN" />
 
          <!--About MetaPlatform-->
       	<meta-data
