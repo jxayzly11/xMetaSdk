@@ -57,6 +57,10 @@ public abstract class MetaUnity: MonoBehaviour {
 	internal  const int MP_ADD_LOCALNOTICE   = 0x117;//增加一条本地通知
 	internal  const int MP_REMOVE_LOCALNOTICE= 0x118;//删除一条本地通知
 	internal  const int MP_ISOPENMENURATE    = 0x119;//获取是否打开菜单的Rate
+	internal  const int MP_GETUSERNAME       = 0x120;//获取GooglePlay/GameCenter的用户名
+	internal  const int MP_GETLEADERSCORE    = 0x121;//获取当前Google/apple帐号的排行榜分数
+	internal  const int MP_SHOWACHIEVEMENT   = 0x122;//展示成就
+	internal  const int MP_ISPOPRATE         = 0x123;//是否弹出Rate
 	
 	internal  const int MV_ISREADY_REWARD    = 0x200;//奖励视频是否准备好
 	internal  const int MV_SHOW_REWARD       = 0x201;//展示奖励视频

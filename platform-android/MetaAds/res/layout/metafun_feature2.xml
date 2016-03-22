@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:text="MenuActivity"
+        android:onClick="menuActivity" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:text="GameAD"
+        android:onClick="gameAd" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:text="showNativeAd"
+        android:onClick="nativeAd" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:text="VideoAd"
+        android:onClick="video" />
+
+
+</LinearLayout>

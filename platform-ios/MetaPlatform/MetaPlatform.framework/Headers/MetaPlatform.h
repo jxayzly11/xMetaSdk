@@ -89,6 +89,8 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 
 +(BOOL)getIsOpenMenuRate;
 
++(BOOL)getIsPopRate;
+
 +(void)unscheduleLocalNotification:(NSString*)key;
 
 +(void)scheduleLocalNotification:(NSString*)key

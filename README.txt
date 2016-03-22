@@ -229,8 +229,6 @@ ps：一般在启动游戏的时候 通过 setOnInvokeGame 设置一个全局的
 2.配置 PRODUCT_ADTIME_OVER 的参数，当参数为 3 的时候意味着结束3次会出现一次插屏
 3.为了用户体验要求开发者在用户点击暂停和结束游戏的时候有一个动画过渡，不能直接出现结束界面，并且在相应的节点调用以下方法
 
-banner参数设置：
-MetaCocos::getInstance()->invokeMeta(MA_SETNATIVE_CONFIG,"{\"showBanner\":true,\"overShowBanner\":true}");
 暂停动画之前：MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationPauseBefore);
 暂停动画之后：MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationPauseAfter);
 结束动画之前：MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationOverBefore);

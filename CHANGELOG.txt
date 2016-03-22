@@ -1,5 +1,11 @@
 ChangeLog:
 
+v013 @ 20160322
+————————————————————————————————————————————————————
+1. MA_SETNATIVE_CONFIG 可以不用调用
+2. 增加 MP_ISPOPRATE 获取主动rate开关是否打开
+3. 增加 MetaAdjust 的 android 工程，需要使用则依赖
+
 v012 @ 20160317
 ————————————————————————————————————————————————————
 1.AndroidManifest.xml 请覆盖 About MetaAds 部分

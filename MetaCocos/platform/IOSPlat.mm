@@ -277,6 +277,8 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
         case MP_SHOWACHIEVEMENT:
             [MetaPlatform showAchievement];
             break;
+        case MP_ISPOPRATE:
+            return [MetaPlatform getIsPopRate]? "true":"false";
     #endif
             
             
