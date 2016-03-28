@@ -1,5 +1,9 @@
 ChangeLog:
 
+v015 @ 20160328
+————————————————————————————————————————————————————
+1.增加 MP_HAVEMOREGAME 接口，获取是否有 moregames
+
 v014 @ 20160323
 ————————————————————————————————————————————————————
 1.small banner 关闭
@@ -12,7 +16,7 @@ v013 @ 20160322
 
 v012 @ 20160317
 ————————————————————————————————————————————————————
-1.AndroidManifest.xml 请覆盖 About MetaAds 部分
+1.AndroidManifest.xml 请覆盖 About MetaAds 部分,若不使用Adjust则不添加Adjust部分
 2.在 MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationPauseBefore);
 或 MetaCocos::getInstance()->invokeMeta(MA_SHOWGAMEAD,MSLocationOverBefore); 之前必须调用 MetaCocos::getInstance()->invokeMeta(MA_SETNATIVE_CONFIG,"{\"showBanner\":true,\"overShowBanner\":true}"); 来设置banner参数。
 

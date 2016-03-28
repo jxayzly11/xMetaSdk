@@ -76,6 +76,8 @@
 #define MP_GETLEADERSCORE         0x121//获取当前Google/apple帐号的排行榜分数
 #define MP_SHOWACHIEVEMENT        0x122//展示成就
 #define MP_ISPOPRATE              0x123//是否弹出Rate
+#define MP_GOGLTRACKER            0x124//GoogleAnalytics event tracker
+#define MP_HAVEMOREGAME           0x125//是否有moreGame
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频

@@ -65,4 +65,20 @@
     return YES;
 }
 
++ (void)application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification*)notification
+{
+    // 图标上的数字设为0
+    application.applicationIconBadgeNumber = 0;
+}
+
++ (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    application.applicationIconBadgeNumber = 0;
+}
+
++ (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    application.applicationIconBadgeNumber = 0;
+}
+
 @end

@@ -28,5 +28,10 @@
 
 +(BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url;
 
++ (void) application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification*)notification;
+
++ (void)applicationWillEnterForeground:(UIApplication *)application;
+
++ (void)applicationDidEnterBackground:(UIApplication *)application;
 
 @end
