@@ -1,5 +1,10 @@
 ChangeLog:
 
+v017 @ 20160418
+————————————————————————————————————————————————————
+1.增加对特定非官方市场的支持；集成的时候，UMENG_CHANNEL  设置为空，并且需要增加权限：
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" /> 
+
 v016 @ 20160329
 ————————————————————————————————————————————————————
 1.增加 MP_GAME_SIGN_IN 接口，主动登录GooglePlay并回调成功/失败
