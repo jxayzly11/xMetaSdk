@@ -34,6 +34,11 @@
 #define MSTypeInterstitial        "MSTypeInterstitial" //插屏广告界面
 #define MSTypeNative              "MSTypeNative"       //原生广告
 
+// General-Umeng Level Analysis
+#define MSStartLevel              "MSStartLevel"       //关卡开始调用
+#define MSFailLevel               "MSFailLevel"        //关卡失败,结束调用
+#define MSFinishLevel             "MSFinishLevel"      //关卡成功,结束调用
+
 //General-Invoke Code
 #define MA_SETADLOAD              0x01//启动广告加载
 #define MA_SETNATIVE_CONFIG       0x02//设置原生参数
@@ -78,6 +83,12 @@
 #define MP_ISPOPRATE              0x123//是否弹出Rate
 #define MP_GOGLTRACKER            0x124//GoogleAnalytics event tracker
 #define MP_HAVEMOREGAME           0x125//是否有moreGame
+#define MP_GAME_SIGN_IN           0x126//sign in GooglePlay/GameCenter
+#define MP_GETSKUDETAIL           0x127//get google puchase sku detils
+#define MP_EVENTCALC              0x128//umeng event of calc
+#define MP_LEVEL_ANALYSIS         0x129//umeng level analysis
+#define MP_MAIL_US                0x130//mail us
+#define MP_GET_MAIL_SUBJECT       0x131//get mail feedback subject
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频
