@@ -22,6 +22,5 @@
 
 - (NSString*)getUserConnectionType;
 
-- (void)analysisEvent:(NSString*)event;
 
 @end

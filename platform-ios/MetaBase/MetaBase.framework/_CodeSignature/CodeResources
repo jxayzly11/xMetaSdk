@@ -4,29 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/GameStatistics.h</key>
+		<data>
+		jtbw2QDcgW595BPsBQ2cTKxblsE=
+		</data>
 		<key>Headers/InvokeParam.h</key>
 		<data>
 		6DrRHhcL2Zp92fB9OVFEAkkf08Q=
 		</data>
 		<key>Headers/MetaBase.h</key>
 		<data>
-		FskpFX19BFc6UZ89vs9mGnLGXgQ=
-		</data>
-		<key>Headers/MobClick.h</key>
-		<data>
-		ZS3KYUEi4Ztz0Ev3CPuywiTlq94=
+		W23BxjAUCdsLCdefOdtZTtAZSXo=
 		</data>
 		<key>Headers/Reachability.h</key>
 		<data>
 		e5d4Z3kV/71X/Qji2/zqqlmW0g0=
 		</data>
+		<key>Headers/UMOnlineConfig.h</key>
+		<data>
+		rp1pjG1n83tskUZNH4O4+hCP3x4=
+		</data>
 		<key>Headers/UserAnalysis.h</key>
 		<data>
-		x4zxw7HvI//6btCE1pAdGlMsA0E=
+		ZmmTGMlEF5LF/HVA8OW5Fzm/ec4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KVEX0AfnO6+12De/RSfVC/4PAMg=
+		r5c+6A2RC108w7GdMTWrZ/+hz7Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,30 +39,83 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/GameStatistics.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jtbw2QDcgW595BPsBQ2cTKxblsE=
+			</data>
+			<key>hash2</key>
+			<data>
+			wMOSzEHUiNvCE7N7UbBz0a5nhH5aTNhrO3ihAh0CSVs=
+			</data>
+		</dict>
 		<key>Headers/InvokeParam.h</key>
-		<data>
-		6DrRHhcL2Zp92fB9OVFEAkkf08Q=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			6DrRHhcL2Zp92fB9OVFEAkkf08Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			0Vl6oE+NGeRqKbBzs+uwEHPKpop1h0plSUbI57g/N18=
+			</data>
+		</dict>
 		<key>Headers/MetaBase.h</key>
-		<data>
-		FskpFX19BFc6UZ89vs9mGnLGXgQ=
-		</data>
-		<key>Headers/MobClick.h</key>
-		<data>
-		ZS3KYUEi4Ztz0Ev3CPuywiTlq94=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			W23BxjAUCdsLCdefOdtZTtAZSXo=
+			</data>
+			<key>hash2</key>
+			<data>
+			l1qk/+N/4j4/v/Qa37xS4txHYUXP11mBt5gdToj9VuM=
+			</data>
+		</dict>
 		<key>Headers/Reachability.h</key>
-		<data>
-		e5d4Z3kV/71X/Qji2/zqqlmW0g0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			e5d4Z3kV/71X/Qji2/zqqlmW0g0=
+			</data>
+			<key>hash2</key>
+			<data>
+			MtEkQlqv149iI9ePUyLoOaFGUhRrX5dBIlLX5BS3i+M=
+			</data>
+		</dict>
+		<key>Headers/UMOnlineConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rp1pjG1n83tskUZNH4O4+hCP3x4=
+			</data>
+			<key>hash2</key>
+			<data>
+			YOCeJcG1bYO7FJFS3N+46GKvD8ewbWNi4t2YLaKvaVg=
+			</data>
+		</dict>
 		<key>Headers/UserAnalysis.h</key>
-		<data>
-		x4zxw7HvI//6btCE1pAdGlMsA0E=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZmmTGMlEF5LF/HVA8OW5Fzm/ec4=
+			</data>
+			<key>hash2</key>
+			<data>
+			pJwryVBIDaysYMwlgZUpRgPutmkDbhiGwfDksbzYx8M=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		pf8lVncegjFNDFSiG6678af1JDI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			pf8lVncegjFNDFSiG6678af1JDI=
+			</data>
+			<key>hash2</key>
+			<data>
+			QNVuva0F0H6tIf3OC0iJypOcd+SGPn8NR4JMbtwyDvk=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

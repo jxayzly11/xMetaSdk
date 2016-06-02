@@ -1,6 +1,0 @@
-framework module MetaAdjust {
-  umbrella header "MetaAdjust.h"
-
-  export *
-  module * { export * }
-}

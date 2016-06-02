@@ -20,9 +20,9 @@
 #if(SDK_METAREPLAY == SDK_OPEN)
     #import <MetaReplay/MetaReplay.h>
 #endif
-#if(SDK_ADJUST == SDK_OPEN)
-    #import <MetaAdjust/MetaAdjust.h>
-#endif
+//#if(SDK_ADJUST == SDK_OPEN)
+//    #import <MetaAdjust/MetaAdjust.h>
+//#endif
 
 
 void IOSPlat::initMeta(void* meta){
@@ -58,9 +58,9 @@ void IOSPlat::initMeta(void* meta){
     [MetaReplay initMeta:viewController];
 #endif
     
-#if (SDK_ADJUST == SDK_OPEN)
-    [MetaAdjust initMeta:viewController];
-#endif
+//#if (SDK_ADJUST == SDK_OPEN)
+//    [MetaAdjust initMeta:viewController];
+//#endif
 
 }
 
@@ -241,9 +241,6 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             break;
         case MP_CLIPBOARD:
             return [[MetaPlatform getClipboard] UTF8String];
-        case MP_EVENTCOUNT:
-            [MetaPlatform analysisEvent:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
-            break;
         case MP_GETSHARELINK:
             return [[MetaPlatform getShareLink] UTF8String];
         case MP_GETISCHINESEUSER:
@@ -279,6 +276,29 @@ std::string IOSPlat::invokeMeta(int type, std::string msg){
             break;
         case MP_ISPOPRATE:
             return [MetaPlatform getIsPopRate]? "true":"false";
+        case MP_EVENTCOUNT:
+            [GameStatistics addEvent:[NSString stringWithCString:msg.c_str() encoding:NSUTF8StringEncoding]];
+            break;
+        case MP_EVENTCALC:{
+            NSDictionary *msgDic = parseJson(msg);
+            NSString *event = [msgDic objectForKey:@"event"];
+            int num = [[msgDic objectForKey:@"number"] intValue];
+            [GameStatistics addEventCount:event count:num];
+            break;
+        }
+        case MP_LEVEL_ANALYSIS:{
+            NSDictionary *msgDic = parseJson(msg);
+            NSString *level = [msgDic objectForKey:@"level"];
+            std::string status = [[msgDic objectForKey:@"status"] UTF8String];
+            if(status==MSStartLevel){
+                [GameStatistics startLevel:level];
+            }else if(status==MSFailLevel){
+                [GameStatistics failLevel:level];
+            }else if(status==MSFinishLevel){
+                [GameStatistics finishLevel:level];
+            }
+            break;
+        }
     #endif
             
             

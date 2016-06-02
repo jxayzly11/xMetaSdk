@@ -6,12 +6,13 @@
 //  Copyright (c) 2015年 metafun. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <MetaBase/MobClick.h>
 #import <MetaBase/Reachability.h>
 #import <MetaBase/InvokeParam.h>
 #import <MetaBase/UserAnalysis.h>
-
+#import <MetaBase/GameStatistics.h>
+#import <MetaBase/UMOnlineConfig.h>
 
 @interface MetaBase : NSObject
 

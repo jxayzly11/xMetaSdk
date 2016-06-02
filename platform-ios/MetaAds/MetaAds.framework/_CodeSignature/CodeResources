@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rHVi8B/dPBiC4igkC/iG2Rw7XyM=
+		/8OM1xVR88qlpgVwV+1KkRpyW0g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -20,13 +20,27 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/MetaAds.h</key>
-		<data>
-		HctURkHXE2vv8JEeHxS8m9VeIwg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			HctURkHXE2vv8JEeHxS8m9VeIwg=
+			</data>
+			<key>hash2</key>
+			<data>
+			wiUMibeGBwpq8oF53xEeweYURZc6wG7me0Us1y6gDVg=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		uzMYSff8vXVckkZPVa4vZb9/SfA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			uzMYSff8vXVckkZPVa4vZb9/SfA=
+			</data>
+			<key>hash2</key>
+			<data>
+			a7+LbUo6gtgSWh/YtmMEIAIvNuXBUZxK2be9MI4bkdw=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cWEUX/zjIjE3GHOJfxDa1nGGzw8=
+		iLvaW2refjB66y1/KMsefgmrTGE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -20,13 +20,27 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/MetaVideo.h</key>
-		<data>
-		7ItKNVXFicv/yQgyK4GixV82GCg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			7ItKNVXFicv/yQgyK4GixV82GCg=
+			</data>
+			<key>hash2</key>
+			<data>
+			b4fbCar7l5E5+fX4qojJIh9T0iACMWPm0jwkc+GReTs=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		JQ2NKYrPk2Z+CulxQPPrdArikWE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			JQ2NKYrPk2Z+CulxQPPrdArikWE=
+			</data>
+			<key>hash2</key>
+			<data>
+			omvGDuuvmIiAYIi+YR3CRPxTxHmHTEkQeA+7X5/QbOQ=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

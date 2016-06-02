@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VRQUGQwLfAN5bpKieByessY/Y0c=
+		+BbPyTYgbqmaRkQFQJP/IJ5F21E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -24,17 +24,38 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/InvokeCode.h</key>
-		<data>
-		bsMcOBaej4aKvtOTkTXOgcae0ls=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bsMcOBaej4aKvtOTkTXOgcae0ls=
+			</data>
+			<key>hash2</key>
+			<data>
+			BUQvOm+YRuaBuxJJbDHunvqNxWVEQdwKVlvZy4srWIE=
+			</data>
+		</dict>
 		<key>Headers/MetaReplay.h</key>
-		<data>
-		e1xcTmVOQ3kstye9aVguWIChhe4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			e1xcTmVOQ3kstye9aVguWIChhe4=
+			</data>
+			<key>hash2</key>
+			<data>
+			i+vFvAqAbrFU03aiVMaguKn/bHFohMKHQQC7H3Ke6Jc=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		SxpDHtQRs6lT5U+eemxecBNTt4k=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			SxpDHtQRs6lT5U+eemxecBNTt4k=
+			</data>
+			<key>hash2</key>
+			<data>
+			djcPNwC/lArGXQF8wDggcLmDpuw/0eW9wxS/5UAemQY=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

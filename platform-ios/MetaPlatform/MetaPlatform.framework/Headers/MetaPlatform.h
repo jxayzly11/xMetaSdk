@@ -83,8 +83,6 @@ typedef NSString*(^InvokeGameCallBack)(NSNumber*, NSString*);
 
 +(NSString*)getClipboard;
 
-+(void)analysisEvent:(NSString*)event;
-
 +(BOOL)getIsChineseUser;
 
 +(BOOL)getIsOpenMenuRate;

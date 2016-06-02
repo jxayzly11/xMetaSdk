@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/MetaPlatform.h</key>
 		<data>
-		V96dTeU/AIynldkqzmZK7cZcSLw=
+		cbjo2fdVmQIaIb8X6DOeb78CkN4=
 		</data>
 		<key>Headers/SocialHelper.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sb166Yru0ZMvqgRB4KrTLI2NzpM=
+		OdVZx5iS3nO94xJow8p5R/pmG3s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -32,25 +32,60 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/IAPHelper.h</key>
-		<data>
-		bCWNkZIy14Fe8uNMGXfciymH3To=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bCWNkZIy14Fe8uNMGXfciymH3To=
+			</data>
+			<key>hash2</key>
+			<data>
+			F+r0RC2+AOSlOBpw9i97zdxzAiLV0rUiBa9kv+WIrsI=
+			</data>
+		</dict>
 		<key>Headers/InvokeCode.h</key>
-		<data>
-		u5/bq9CmVMXav9ppqDmMKgmIF50=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			u5/bq9CmVMXav9ppqDmMKgmIF50=
+			</data>
+			<key>hash2</key>
+			<data>
+			yTymKd1XIyGxqsjKwclz2JabCQZxXvYKWK1eL7gGiPc=
+			</data>
+		</dict>
 		<key>Headers/MetaPlatform.h</key>
-		<data>
-		V96dTeU/AIynldkqzmZK7cZcSLw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			cbjo2fdVmQIaIb8X6DOeb78CkN4=
+			</data>
+			<key>hash2</key>
+			<data>
+			9yO9Nl+SEwZlX4AoGwSWWaLN5Hwr0ijPHELdbRikFWY=
+			</data>
+		</dict>
 		<key>Headers/SocialHelper.h</key>
-		<data>
-		Gl+WssSyM1yHNNz9bYwSdv20gUQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Gl+WssSyM1yHNNz9bYwSdv20gUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lb2yobiKATFpQMRYT1lvVb+iJlM0U06dFYe14XrOOmE=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		dph1kEYF2li5cuiwTS/YyTnv9kk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dph1kEYF2li5cuiwTS/YyTnv9kk=
+			</data>
+			<key>hash2</key>
+			<data>
+			0yNJVg6ndnjMLwCHnybkgFOZ/R2RlCpdl7cwwloy2Ig=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
