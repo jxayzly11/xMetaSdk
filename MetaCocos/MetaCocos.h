@@ -25,6 +25,8 @@
 #define MSLocationNativeBefore    "MSLocationNativeBefore" //原生界面之前调用
 #define MSLocationNativeAfter     "MSLocationNativeAfter"  //原生界面之后调用
 #define MSLocationNativeOver      "MSLocationNativeOver"   //原生界面结束调用
+#define MSLocationEveryBefore     "MSLocationEveryBefore"  //必出动画之前调用
+#define MSLocationEveryOver       "MSLocationEveryOver"    //必出动画之后调用
 
 //General-AdType
 #define MSTypeNull                "MSTypeNull"         //啥也没有
@@ -50,6 +52,7 @@
 #define MA_NATIVEICONCACHE        0x08//请求原生广告
 #define MA_NATIVEICONCLICKED      0x09//原生广告被点击
 #define MA_EXIT                   0x0a//显示退出广告
+#define MA_PUZZLE                 0x0b//显示退出广告
 
 #define MP_GETITEMKEY             0x100//根据名字获取Key值
 #define MP_UPLOADSCORE            0x101//上传榜单分数
