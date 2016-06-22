@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.metafun.xxx"
-      android:versionCode="10010"
-      android:versionName="1.0.010"
+      android:versionCode="10022"
+      android:versionName="1.0.022"
       android:installLocation="auto">
 
     <supports-screens 
@@ -55,12 +55,10 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        
-        <receiver
-            android:name="com.adjust.sdk.AdjustReferrerReceiver"
-            android:exported="true" >
+
+        <receiver android:name="com.metafun.metaads.MetaReceiver" >
             <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
         
@@ -87,12 +85,7 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Google"/>
-        <meta-data
-            android:name="Adjust_Token"
-            android:value="@string/PRODUCT_ID_ADJUST_TOKEN" />
-        <meta-data
-            android:name="Adjust_Evn"
-            android:value="@string/PRODUCT_ID_ADJUST_EVN" />
+
 
          <!--About MetaPlatform-->
       	<meta-data
@@ -112,24 +105,12 @@
             android:name="com.vungle.publisher.FullScreenAdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-        <activity
-            android:name="com.jirbo.adcolony.AdColonyOverlay"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.jirbo.adcolony.AdColonyFullscreen"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.jirbo.adcolony.AdColonyBrowser"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
 
         <!-- About MetaFacebook-->
         <activity android:name="com.facebook.LoginActivity" />
 
         <provider
-            android:authorities="com.facebook.app.NativeAppCallContentProvider499750536845653"
+            android:authorities="com.facebook.app.NativeAppCallContentProvider<FBID>"
             android:name="com.facebook.NativeAppCallContentProvider"
             android:exported="true"/>
         <meta-data
