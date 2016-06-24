@@ -15,7 +15,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="48dp"
-            android:text="Splash"
+            android:text="splashAd"
             android:onClick="splash" />
         
         <Button
@@ -45,14 +45,8 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="48dp"
-            android:text="PauseAdBefore"
-            android:onClick="pauseAd" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="48dp"
-            android:text="OverAdBefore"
-            android:onClick="overAd" />
+            android:text="GiftAd"
+            android:onClick="giftAd" />
         
         <Button
             android:layout_width="fill_parent"
