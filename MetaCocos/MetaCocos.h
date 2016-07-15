@@ -53,6 +53,7 @@
 #define MA_NATIVEICONCLICKED      0x09//原生广告被点击
 #define MA_EXIT                   0x0a//显示退出广告
 #define MA_PUZZLE                 0x0b//显示退出广告
+#define MA_SLENPUSH               0x0c//设置多语言Push开关
 
 #define MP_GETITEMKEY             0x100//根据名字获取Key值
 #define MP_UPLOADSCORE            0x101//上传榜单分数
