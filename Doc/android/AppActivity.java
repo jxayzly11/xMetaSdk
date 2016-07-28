@@ -47,7 +47,7 @@ public class AppActivity extends Cocos2dxActivity {
 		MetaFacebook.initMeta(savedInstanceState);
 	}
 
-	@Override
+@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		MetaFacebook.onSaveInstanceState(outState);
@@ -69,23 +69,22 @@ public class AppActivity extends Cocos2dxActivity {
 	@Override
     protected void onResume() {
         super.onResume();
-        MetaAds.onResume();
-        MetaFacebook.onResume();
-		MetaVideo.onResume();
+        MetaAds.onResume(this);
+        MetaFacebook.onResume(this);
+		MetaVideo.onResume(this);
     }
 
     @Override
     protected void onPause() {
     	super.onPause();
-    	MetaAds.onResume();
-    	MetaFacebook.onPause();
-		MetaVideo.onPause();
+    	MetaAds.onResume(this);
+    	MetaFacebook.onPause(this);
+		MetaVideo.onPause(this);
     }
 
     @Override
 	protected void onStart() {
     	super.onStart();
-    	MetaAds.onStart();
     	MetaPlatform.onStart();
 	}
 
@@ -98,7 +97,7 @@ public class AppActivity extends Cocos2dxActivity {
     @Override
     protected void onDestroy() {
     	super.onDestroy();
-    	MetaAds.onDestroy();
+    	MetaAds.onDestroy(this);
     	MetaPlatform.onDestroy();
 		MetaFacebook.onDestroy();
     }
@@ -108,3 +107,4 @@ public class AppActivity extends Cocos2dxActivity {
 		MetaAds.onBackPressed();
 	}
 }
+
