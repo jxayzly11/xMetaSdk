@@ -28,6 +28,8 @@ package org.cocos2dx.cpp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import com.metafun.fun.SDK;
+import com.metafun.fun.ads.AdNativeType;
 import com.metafun.metaads.MetaAds;
 import com.metafun.metabase.MetaBase;
 import com.metafun.metafacebook.MetaFacebook;
@@ -41,13 +43,16 @@ public class AppActivity extends Cocos2dxActivity {
 		super.onCreate(savedInstanceState);
 
 		MetaBase.initMeta(this, this.mGLSurfaceView);
+		MetaAds.initMeta(AdNativeType.LONG,0x00000000);
 		MetaVideo.initMeta();
-		MetaAds.initMeta();
 		MetaPlatform.initMeta();
 		MetaFacebook.initMeta(savedInstanceState);
+
+		//启动默认隐藏banner条
+		SDK.hideBanner(this);
 	}
 
-@Override
+	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		MetaFacebook.onSaveInstanceState(outState);
@@ -77,7 +82,7 @@ public class AppActivity extends Cocos2dxActivity {
     @Override
     protected void onPause() {
     	super.onPause();
-    	MetaAds.onResume(this);
+    	MetaAds.onPause(this);
     	MetaFacebook.onPause(this);
 		MetaVideo.onPause(this);
     }
@@ -107,4 +112,3 @@ public class AppActivity extends Cocos2dxActivity {
 		MetaAds.onBackPressed();
 	}
 }
-
