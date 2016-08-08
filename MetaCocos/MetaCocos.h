@@ -52,7 +52,6 @@
 #define MA_NATIVEICONCACHE        0x08//请求原生广告
 #define MA_NATIVEICONCLICKED      0x09//原生广告被点击
 #define MA_EXIT                   0x0a//显示退出广告
-#define MA_PUZZLE                 0x0b//显示退出广告
 #define MA_SLENPUSH               0x0c//设置多语言Push开关
 
 #define MP_GETITEMKEY             0x100//根据名字获取Key值
@@ -93,6 +92,7 @@
 #define MP_LEVEL_ANALYSIS         0x129//umeng level analysis
 #define MP_MAIL_US                0x130//mail us
 #define MP_GET_MAIL_SUBJECT       0x131//get mail feedback subject
+#define MP_ACTION_URL             0x133//get mail feedback subject
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
 #define MV_SHOW_REWARD            0x201//展示奖励视频
