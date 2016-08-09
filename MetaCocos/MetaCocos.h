@@ -92,6 +92,7 @@
 #define MP_LEVEL_ANALYSIS         0x129//umeng level analysis
 #define MP_MAIL_US                0x130//mail us
 #define MP_GET_MAIL_SUBJECT       0x131//get mail feedback subject
+#define MP_GET_PARAM_FROM_SERVER  0x132//getParamFromServer
 #define MP_ACTION_URL             0x133//get mail feedback subject
 
 #define MV_ISREADY_REWARD         0x200//奖励视频是否准备好
