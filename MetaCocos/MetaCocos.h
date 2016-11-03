@@ -53,6 +53,8 @@
 #define MA_NATIVEICONCLICKED      0x09//原生广告被点击
 #define MA_EXIT                   0x0a//显示退出广告
 #define MA_SLENPUSH               0x0c//设置多语言Push开关
+#define MA_ISREADY_DEVAD          0x0d//判断是否打开DevAD
+#define MA_DEVAD_CLICK            0x0f//DevAD点击事件
 
 #define MP_GETITEMKEY             0x100//根据名字获取Key值
 #define MP_UPLOADSCORE            0x101//上传榜单分数
